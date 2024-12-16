@@ -43,3 +43,7 @@ return newsApi.get(`/users/${username}`).then(({data})=>{
   return data
 })
 }
+
+export const updateVotesOnArticleById = (article_id) => {
+  return newsApi.patch(`/article/${article_id}`)
+}
