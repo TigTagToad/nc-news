@@ -1,5 +1,5 @@
 import ArticlesList from "./ArticlesList"
-import { getArticles, getArticlesById } from "../../axios/api";
+import { getArticles} from "../../axios/api";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router";
