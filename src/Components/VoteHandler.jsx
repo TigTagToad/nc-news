@@ -5,13 +5,14 @@ export default function VoteHandler ({votes, article_id }){
     const [votesAdded, setVotesAdded] = useState(0)
     const [error, setError] = useState(null)
 
-const handleClickUp = () => {
+const handleClickUp = (event) => {
+    event.preventDefault()
     setVotesAdded((currVotesAdded)=>{
         return currVotesAdded + 1
     })
     setError(null);
     updateVotesOnArticleById(article_id, 1).catch((err)=>{
-        setError("Your like was not successful. Please try again!");
+        setError("Your vote was not successful. Please try again!");
         setVotesAdded((currVotesAdded)=>{
             return currVotesAdded -1
         })
@@ -24,7 +25,7 @@ const handleClickDown = () => {
     })
     setError(null);
     updateVotesOnArticleById(article_id, -1).catch((err)=>{
-        setError("Your like was not successful. Please try again!");
+        setError("Your vote was not successful. Please try again!");
         setVotesAdded((currVotesAdded)=>{
             return currVotesAdded + 1
         })
