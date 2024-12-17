@@ -32,11 +32,11 @@ const handleClickDown = () => {
     })
 }
    return(
-    <>
+    <div className="comment">
     <p>Total Votes: {votes + votesAdded}</p>
-    <button type="submit" onClick={handleClickUp}>Up Vote</button>
-    <button typeof="submit" onClick={handleClickDown}>Down Vote</button>
+    <button type="submit" onClick={handleClickUp}><span>Up Vote</span></button>
+    <button typeof="submit" onClick={handleClickDown}><span>Down Vote</span></button>
     {error ? <p>{error}</p> : null}
-    </>
+    </div>
    )
 }

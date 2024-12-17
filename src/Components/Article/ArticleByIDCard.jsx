@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { Avatar, Paper } from "@mui/material";
 import { getUserByUsername } from "../../axios/api"
 import VoteHandler from "../VoteHandler";
-import CommentHandler from "../Comments/CommentHandler";
+import CommentHandlerAdd from "../Comments/CommentHandler";
 
 export default function ArticleById ({article}) {
 
@@ -27,7 +27,7 @@ return(
 </div>
 <VoteHandler votes={article.votes} article_id={article_id} />
 {/* <button type="submit" onClick={handleClick}>{article.votes + votesAdded}</button> */}
-<CommentHandler />
+<CommentHandlerAdd />
 <Comments article_id={article_id} />
 </>
 
