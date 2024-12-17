@@ -56,3 +56,9 @@ export const addComment = (article_id, body) => {
     
   })
 }
+
+export const deleteComment = (comment_id) => {
+  return newsApi.delete(`/comments/${comment_id}`).then(()=>{
+    console.log("comment deleted")
+  })
+}

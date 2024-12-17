@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { UserContext } from "../../Contexts/UserContext";
 import { useParams } from "react-router";
 
-export default function CommentHandler () {
+ export default function CommentHandlerAdd () {
     const {article_id} = useParams()
     const [newComment, setNewComment] = useState("");
     const [error, setError] = useState("")
@@ -15,7 +15,7 @@ export default function CommentHandler () {
             setError(null);
             addComment(article_id,{body: newComment, author: user.username})
             .then(()=>{
-                
+                setNewComment("")
             })
             .catch((err)=>{
                 
@@ -30,13 +30,21 @@ export default function CommentHandler () {
             <form id="comment-form">
               <label id="comment-label">
                 Add a comment: 
-                <input
+                {/* <input
                   id="new-comment"
                   value={newComment}
                   onChange={(event) => setNewComment(event.target.value)}
-                />
+                /> */}
+                <textarea 
+                className="text"
+                name="newComment" rows="3" cols="50"
+                id="new-comment"
+                value={newComment}
+                onChange={(event) => setNewComment(event.target.value)}>
+
+                </textarea>
               </label>
-              <button type="submit" onClick={handleClick}>Add Comment</button>
+              <button type="submit" onClick={handleClick} className="comment"><span>Add Comment</span></button>
             </form>
             {error ? <p>{error}</p> : null}
             </div>
@@ -44,3 +52,6 @@ export default function CommentHandler () {
     
 
 }
+
+
+

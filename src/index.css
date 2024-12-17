@@ -20,6 +20,15 @@
   div.article {
     font-size: 20px;
   }
+  textarea  
+  {  
+     
+     font-size: 20px;   
+  }
+  button span{
+    font-size: 20px;
+  }
+
 }
 
 /* If the screen size is 600px or less, set the font-size of <div> to 30px */
@@ -30,6 +39,17 @@
   div.article {
     font-size: 30px;
   }
+  button span{
+    font-size: 30px;
+  }
+  button{
+    padding: 10px;
+  }
+  textarea  
+{  
+   
+   font-size: 30px;   
+}
 }
 
 
