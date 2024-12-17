@@ -10,7 +10,7 @@ useEffect(()=>{
         setComments(comments)
 
     })
-},[])
+},[comments])
 
 return(
   <CommentList comments={comments}/>
