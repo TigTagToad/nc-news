@@ -7,7 +7,7 @@ export default function ArticlesList ({articles}) {
 
 
 return (
-    <>
+    <div className="article">
     <ul>
         {
             articles.map((article) => {
@@ -15,6 +15,6 @@ return (
             })
         }
     </ul>
-    </>
+    </div>
 )
 }

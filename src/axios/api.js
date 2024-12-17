@@ -44,6 +44,8 @@ return newsApi.get(`/users/${username}`).then(({data})=>{
 })
 }
 
-export const updateVotesOnArticleById = (article_id) => {
-  return newsApi.patch(`/article/${article_id}`)
+export const updateVotesOnArticleById = (article_id, votes) => {
+  return newsApi.patch(`/articles/${article_id}`, { inc_votes: votes}).then(()=>{
+    console.log("patch complete")
+  })
 }
