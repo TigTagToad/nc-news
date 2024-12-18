@@ -5,11 +5,12 @@ const newsApi = axios.create({
   });
 
 
-export const getArticles = () => {
+export const getArticles = (topic) => {
 
 
     return newsApi.get(`/articles`,{
       params: {
+        topic : topic,
         limit : 10
       }
     }).then(( {data}) => {
@@ -60,5 +61,13 @@ export const addComment = (article_id, body) => {
 export const deleteComment = (comment_id) => {
   return newsApi.delete(`/comments/${comment_id}`).then(()=>{
     console.log("comment deleted")
+  })
+}
+
+export const getTopics = () => {
+  return newsApi.get(`/topics`).then(({data})=>
+  {
+    const {topics} = data
+    return topics
   })
 }

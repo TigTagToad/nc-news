@@ -9,13 +9,14 @@ export default function Articles () {
 
     const [articles, setArticles] = useState([]);
  
-  
+    const {topic} = useParams()
         
         useEffect(() => {
-          getArticles().then(( {articles} ) => {
+          getArticles(topic).then(( {articles} ) => {
+            console.log(articles)
             setArticles(articles);
           });
-        }, []);
+        }, [topic]);
 
     return(
         <ArticlesList articles={articles}/>
