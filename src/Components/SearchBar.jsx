@@ -6,7 +6,7 @@ import Articles from "./Article/Articles"
 import { useSearchParams } from "react-router"
 
 export default function SearchBar () {
-    const [toggle, setToggle] = useState(false)
+    const [toggle, setToggle] = useState(true)
     const [formData, setFormData] = useState(
         {
             "sort_by": "created_at",
@@ -34,7 +34,7 @@ export default function SearchBar () {
    
   
     return(
-    <>
+    <div>
        
      
 
@@ -51,12 +51,13 @@ export default function SearchBar () {
             <option value="votes" key="votes" className="link"> votes </option>
         </select>
         </label>
-        <label
-        name="order"><span className="link">Order: </span> 
+       
+        <label name="order"><span className="link"> Order: </span> 
         <button type="toggle" onClick={handleClick}><span className="link">{toggle ? " Ascending " : " Descending "}</span></button>
         </label>
+        
      
-    </>
+    </div>
     )
 
 }
