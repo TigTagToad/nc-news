@@ -11,7 +11,7 @@ const [topics, setTopics] = useState([]);
 
 useEffect(() => {
       getTopics().then(( topics ) => {
-          console.log(topics)
+          
         setTopics(topics);
       });
     }, []);
