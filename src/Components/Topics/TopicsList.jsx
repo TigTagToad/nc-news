@@ -19,9 +19,10 @@ useEffect(() => {
   return (
     
       topics.map((topic)=>{
+        
           return (
-           
-            <Link to={`/${topic.slug}`} className="nav-link" key={topic.slug}> {topic.slug} </Link>
+            
+            <Link to={`/${topic.slug}`} className="nav-link" key={topic.slug}><span className="link"> {topic.slug} </span></Link>
            
           )
       }

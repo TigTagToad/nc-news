@@ -7,7 +7,7 @@ export default function Header () {
     return (
         <>
         <h1>TUNS O' FUN</h1>
-        <Link to={"/"} className="nav-link" key="home"> Home </Link>  
+        <Link to={"/"} className="nav-link" key="home"><span className="link"> Home </span></Link>  
         <TopicsList/>
        
         </>
