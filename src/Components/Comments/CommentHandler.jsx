@@ -30,11 +30,6 @@ import { useParams } from "react-router";
             <form id="comment-form">
               <label id="comment-label">
                 Add a comment: 
-                {/* <input
-                  id="new-comment"
-                  value={newComment}
-                  onChange={(event) => setNewComment(event.target.value)}
-                /> */}
                 <textarea 
                 className="text"
                 name="newComment" rows="3" cols="50"
