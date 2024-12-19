@@ -1,6 +1,7 @@
+
 import { useState, useEffect} from "react"
 import { getCommentsByArticleId } from "../../axios/api"
-import CommentList from "./CommentList"
+import CommentHandlerAdd from "./CommentHandler"
 
 
 export default function Comments({article_id}){
@@ -13,6 +14,7 @@ useEffect(()=>{
 },[])
 
 return(
-  <CommentList comments={comments}/>
+  <CommentHandlerAdd comments={comments}/>
 )
 }
+

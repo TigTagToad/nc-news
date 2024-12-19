@@ -1,10 +1,7 @@
 import { useParams} from "react-router"
 import Comments from "../Comments/Comments"
-import { useEffect, useState } from "react"
-import { Avatar, Paper } from "@mui/material";
-import { getUserByUsername } from "../../axios/api"
+import { Paper } from "@mui/material";
 import VoteHandler from "../VoteHandler";
-import CommentHandlerAdd from "../Comments/CommentHandler";
 
 export default function ArticleById ({article}) {
 
@@ -16,7 +13,6 @@ return(
 <h2>{article.title}</h2>
 
 <p>written by: {article.author}</p>
-{/* <Avatar src={imgURL}/> */}
 <Paper square={false} >
 
 <p >{article.topic}</p>
@@ -26,8 +22,6 @@ return(
 <p className="article">{article.body}</p>
 </div>
 <VoteHandler votes={article.votes} article_id={article_id} />
-{/* <button type="submit" onClick={handleClick}>{article.votes + votesAdded}</button> */}
-<CommentHandlerAdd />
 <Comments article_id={article_id} />
 </>
 

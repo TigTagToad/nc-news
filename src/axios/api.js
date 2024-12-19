@@ -56,7 +56,8 @@ export const updateVotesOnArticleById = (article_id, votes) => {
 
 export const addComment = (article_id, body) => {
 
-  return newsApi.post(`/articles/${article_id}/comments`, body).then(()=>{
+  return newsApi.post(`/articles/${article_id}/comments`, body).then(({data})=>{
+    return data.comment
     
   })
 }

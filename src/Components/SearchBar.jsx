@@ -1,8 +1,5 @@
 
-import { useState, useEffect } from "react"
-import { getArticles } from "../axios/api"
-import Article from "./Article/ArticleByID"
-import Articles from "./Article/Articles"
+import { useState} from "react"
 import { useSearchParams } from "react-router"
 
 export default function SearchBar () {
