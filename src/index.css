@@ -18,7 +18,16 @@
     font-size: 20px;
   }
   div.article {
+
+
     font-size: 20px;
+  }
+  div.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.10fr;
+    
   }
   textarea  
   {  
@@ -42,6 +51,9 @@
   div.article {
     font-size: 30px;
   }
+  article.img{
+    width: 50px;
+    }
   button span{
     font-size: 30px;
   }
@@ -70,6 +82,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-align: center;
 }
 
 
